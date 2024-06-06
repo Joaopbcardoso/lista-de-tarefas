@@ -44,7 +44,7 @@ function App() {
           placeholder='Nova Tarefa'
           value={tarefa}
           onChange={(e)=> setTarefa(e.target.value)}/>
-          <button onClick={addTarefa}>Adicionar</button>
+          <button className='add' onClick={addTarefa}>Adicionar</button>
         </div>
         <ul>
           {/* d */}
