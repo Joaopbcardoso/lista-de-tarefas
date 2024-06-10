@@ -35,6 +35,10 @@ function App() {
     }
   }, [tarefa])
 
+  const concluirTarefa = useCallback((index) => {
+    dispatch({type: 'CONCLUIDO', payload: index})
+ })
+
   return (
     <>
       <div className="center">
@@ -49,7 +53,20 @@ function App() {
         <ul>
           {/* d */}
           {tarefaAtual.map((tarefas, index)=>(
-            <li kay={index}>{tarefas.text}</li>
+            <li key={index}>
+              <span style={{textDecoration: tarefas.completed ? 'line-through': 'none'}}>
+                {tarefas.text}
+              </span>
+
+              {
+                // verificar se tem tarefa
+                !tarefaAtual.completed && (
+                  <>
+                    <button onClick={()=>concluirTarefa(index)}>✓</button>
+                  </>
+                )
+              }
+            </li>
           ))}
         </ul>
       </div>
