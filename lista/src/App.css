@@ -1,7 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: radial-gradient(farthest-corner at right top,#21A09D, #06182D);
+  width: 100vw;
+  height: 100vh;
+}
+
+.titulo{
+  display: flex;
+  margin-bottom: 30px;
+}
+
+#logo-h1{
+  width: 40px;
+  margin: 5px;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #06182D;
+  width: 800px;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 3px black;
+}
+
+
+
+h1{
+  text-decoration: line-through;
+  font-size: 40px;
+  color: aliceblue;
+}
+
 .input-lista{
   padding: 10px;
+  width: 40vw;
 }
 
 .add{
   padding: 10px;
+  background-color: #bfab25;
+  text-transform: uppercase;
+  font-weight: 800;
+  transition: 1s;
+}
+.add:hover{
+  transform: scale(1.11);
+  transition: 1s;
+}
+
+.itens{
+  font-size: 25 px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  color:aliceblue;
+  width: 350px;
+  border: solid 1px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.concluir{
+  background-color: #00783e;
+  margin: 1px 10px 1px 2px;
+}
+.concluir:hover{
+  background-color: #46aa7a;
+}
+
+.excluir{
+  background-color: #780800;
+  margin: 2px;
+}
+.excluir:hover{
+  background-color: #bd4d45;
+}
+
+#lixo{
+  width: 15px;
+}
+
+#check{
+  width: 15px;
+  filter:brightness(10%);
 }
